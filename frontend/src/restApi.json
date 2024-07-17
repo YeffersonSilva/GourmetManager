@@ -142,32 +142,32 @@
             }
         ],
         "navbarLinks": [
-            {
-                "id": 1,
-                "title": "HOME",
-                "link": "heroSection"
-            },
-            {
-                "id": 2,
-                "title": "ABOUT US",
-                "link": "about"
-            },
-            {
-                "id": 3,
-                "title": "SERVICES",
-                "link": "qualities"
-            },
-            {
-                "id": 4,
-                "title": "TEAM",
-                "link": "team"
-            },
-            {
-                "id": 5,
-                "title": "RESERVATION",
-                "link": "reservation"
-            }
-        ]
+        {
+            "id": 1,
+            "title": "INÍCIO",
+            "link": "heroSection"
+        },
+        {
+            "id": 2,
+            "title": "SOBRE NÓS",
+            "link": "about"
+        },
+        {
+            "id": 3,
+            "title": "SERVIÇOS",
+            "link": "qualities"
+        },
+        {
+            "id": 4,
+            "title": "EQUIPE",
+            "link": "team"
+        },
+        {
+            "id": 5,
+            "title": "RESERVAS",
+            "link": "reservation"
+        }
+    ]
     
     } 
     ]

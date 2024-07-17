@@ -7,7 +7,8 @@
   margin: 0;
   padding: 0;
 }
-::-webkit-scrollbar{
+
+::-webkit-scrollbar {
   display: none;
 }
 
@@ -24,6 +25,7 @@ nav {
   align-items: center;
   border-bottom-right-radius: 7px;
   border-bottom-left-radius: 7px;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
 }
 nav::after {
   content: "";
@@ -38,7 +40,8 @@ nav .logo {
   flex: 1;
   display: flex;
   align-items: center;
-  font-size: 2rem;
+  font-size: 2.5rem; /* Tamaño de letra más grande */
+  color: #333; /* Color de letras gris oscuro */
 }
 nav .navLinks {
   flex: 2;
@@ -55,26 +58,26 @@ nav .navLinks .links {
 nav .navLinks .links a {
   text-decoration: none;
   color: #555;
-  font-size: 20px;
+  font-size: 22px; /* Tamaño de letra más grande */
   font-weight: 300;
   letter-spacing: 1.4px;
 }
 nav .navLinks .links a:hover {
-  color: #222;
+  color: #444;
   transition: 0.3s;
   cursor: pointer;
 }
 nav .menuBtn {
-  padding: 8px 20px;
-  color: black;
+  padding: 10px 25px; /* Aumentar padding */
+  color: #333;
   background: transparent;
-  border: 1px solid #333;
+  border: 1px solid #666;
   border-radius: 20px;
-  font-size: 16px;
+  font-size: 18px; /* Tamaño de letra más grande */
 }
 nav .menuBtn:hover {
   color: #fff;
-  background: #222;
+  background: #666; /* Fondo gris oscuro en hover */
   transition: 0.3s;
   cursor: pointer;
 }
@@ -82,8 +85,9 @@ nav .hamburger {
   display: none;
 }
 nav svg {
-  font-size: 1.75rem;
+  font-size: 2rem; /* Tamaño de ícono más grande */
 }
+
 @media (max-width: 1520px) {
   nav {
     min-width: 100%;
@@ -162,7 +166,7 @@ nav svg {
   min-height: 80vh;
   justify-content: space-between;
   align-items: center;
-  background: url(/background.svg);
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Degradado de blanco a verde */
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -188,6 +192,7 @@ nav svg {
 .heroSection .container .banner .title {
   font-size: 8.5rem;
   font-weight: 200;
+  color: #333; /* Color de letras gris oscuro */
 }
 .heroSection .container .banner .textAndLogo {
   width: 50%;
@@ -219,6 +224,11 @@ nav svg {
 .heroSection .container .banner:last-child {
   flex: 1;
 }
+.heroSection .container .banner .logo {
+  width: 170px; /* Tamaño reducido del logo */
+  height: auto;
+}
+
 @media (max-width: 1280px) {
   .heroSection .container {
     width: 100%;
@@ -310,8 +320,8 @@ nav svg {
     height: 350px;
   }
 }
-@media(max-width: 650px){
-  .heroSection{
+@media (max-width: 650px) {
+  .heroSection {
     padding: 0;
   }
 }
@@ -321,6 +331,8 @@ nav svg {
     height: auto;
   }
 }
+
+
 /**********************************************************************************************************************/
 
 /******************* ABOUT US COMPONENT STYLING **************/
@@ -330,7 +342,9 @@ nav svg {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background-color: #f9fbf2;
+  background: #6D6027;  /* fallback for old browsers */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   /* Degradado de gris oscuro a gris claro */
 }
 .about .container {
   max-width: 1500px;
@@ -348,50 +362,52 @@ nav svg {
 }
 .heading {
   font-weight: 200;
-  font-size: 4rem;
-  color: #111;
+  font-size: 5rem; /* Letras más grandes */
+  color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner .mid {
   width: 65%;
-  font-size: 18px;
+  font-size: 20px; /* Aumentar tamaño de fuente */
   font-weight: 300;
   letter-spacing: 2px;
   word-spacing: 5px;
+  color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner .top p {
-  font-size: 18px;
+  font-size: 20px; /* Aumentar tamaño de fuente */
   font-weight: 400;
-  color: #111;
+  color: #111; /* Color de letras para mayor contraste */
   letter-spacing: 2px;
 }
 .about .container .banner a {
-  border: 1px solid black;
-  padding: 8px 28px;
+  border: 1px solid #111; /* Bordes para mayor contraste */
+  padding: 10px 30px; /* Aumentar padding */
   border-radius: 30px;
   display: flex;
   width: fit-content;
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 15px;
-  color: #111;
+  font-size: 18px; /* Aumentar tamaño de fuente */
+  color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner a span {
   margin-left: 1rem;
   padding: 6px;
-  background: #111;
+  background: #111; /* Fondo del span */
   border-radius: 100%;
-  color: #fff;
+  color: #fff; /* Color de letras del span */
 }
 .about .container .banner a:hover {
   color: #fff;
-  background: #111;
+  background: #111; /* Fondo en hover */
   transition: ease-in-out 0.3s;
 }
 .about .container .banner a:hover span {
-  background: #fff;
-  color: #111;
+  background: #fff; /* Fondo del span en hover */
+  color: #111; /* Color de letras del span en hover */
 }
+
 @media (max-width: 1520px) {
   .about {
     padding: 30px 20px;
@@ -442,6 +458,7 @@ nav svg {
   padding: 75px 20px;
   justify-content: center;
   align-items: center;
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Degradado de blanco a verde */
 }
 .qualities .container {
   min-width: 1500px;
@@ -514,6 +531,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
 }
 .menu .container {
   max-width: 1500px;
@@ -610,6 +628,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 20px;
+  background: linear-gradient(90deg, #ACBB78, #F7F8F8); /* Degradado de blanco a verde */
 }
 .team .container {
   max-width: 1500px;
@@ -693,6 +712,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
 }
 .who_are_we .container {
   max-width: 1500px;
@@ -776,12 +796,13 @@ nav svg {
 /******************* NOT FOUND PAGE STYLING **************/
 /**********************************************************************************************************************/
 footer {
-  background: #f9fbf2;
+  background: #F7F8F8;
   display: flex;
   justify-content: center;
   align-items: center;
   height: fit-content;
   padding: 20px 20px 10px 20px;
+  background: linear-gradient(90deg, #ACBB78, #F7F8F8); /* Degradado de blanco a verde */
 }
 footer .container {
   max-width: 1500px;
@@ -857,10 +878,7 @@ footer .container .banner .right {
   padding: 30px 20px;
   justify-content: center;
   align-items: center;
-  background: url(/reserve.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
 }
 .reservation .container {
   max-width: 1500px;
@@ -1047,10 +1065,7 @@ footer .container .banner .right {
   min-height: 100vh;
   justify-content: center;
   align-items: center;
-  background: url(/background.svg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: right;
+  background: linear-gradient(90deg, #ACBB78, #F7F8F8); /* Degradado de blanco a verde */
 }
 .notFound .container {
   max-width: 1500px;
@@ -1111,4 +1126,3 @@ footer .container .banner .right {
     font-size: 1.75rem;
   }
 }
-/**********************************************************************************************************************/
