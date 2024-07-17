@@ -171,59 +171,76 @@ nav svg {
   background-size: cover;
   background-position: right;
   padding: 0 15px;
+  padding-bottom: 500px; /* Añadir padding-bottom para más espacio */
+  margin-bottom: -350px; /* Ajustar margin-bottom */
 }
+
 .heroSection .container {
   display: flex;
   max-width: 1200px;
   min-width: 1200px;
 }
+
 .heroSection .container .banner:first-child {
   flex: 2;
   display: flex;
   flex-wrap: wrap;
 }
+
 .heroSection .container .banner .largeBox {
   width: 100%;
 }
+
 .heroSection .container .banner .combined_boxes {
   display: flex;
   width: 100%;
 }
+
 .heroSection .container .banner .title {
   font-size: 8.5rem;
   font-weight: 200;
   color: #333; /* Color de letras gris oscuro */
 }
+
 .heroSection .container .banner .textAndLogo {
   width: 50%;
 }
+
 .heroSection .container .banner .textWithSvg {
   position: relative;
 }
+
 .heroSection .container .banner .textWithSvg img {
   position: absolute;
   right: 0;
   top: 0;
 }
+
 .heroSection .container .banner:first-child .dishes_title {
   display: none;
 }
+
 .heroSection .container .banner:first-child .imageBox {
   width: 50%;
 }
+
 .heroSection .container .banner:last-child .imageBox {
   width: 100%;
 }
+
 .heroSection .container .banner .imageBox img {
-  width: 300px;
-  height: 385px;
+  width: 400px;
+  height: 485px;
 }
+
 .heroSection .container .banner:last-child .imageBox {
   text-align: end;
 }
+
 .heroSection .container .banner:last-child {
   flex: 1;
 }
+
 .heroSection .container .banner .logo {
   width: 170px; /* Tamaño reducido del logo */
   height: auto;
@@ -236,6 +253,7 @@ nav svg {
     padding: 30px 20px;
   }
 }
+
 @media (max-width: 1072px) {
   .heroSection .container .banner .title {
     font-size: 6.5rem;
@@ -245,6 +263,7 @@ nav svg {
     height: 335px;
   }
 }
+
 @media (max-width: 880px) {
   .heroSection .container .banner .title {
     font-size: 6rem;
@@ -254,6 +273,7 @@ nav svg {
     height: 265px;
   }
 }
+
 @media (max-width: 830px) {
   .heroSection .container .banner:last-child .imageBox {
     height: 350px;
@@ -279,11 +299,13 @@ nav svg {
     width: 100%;
   }
 }
+
 @media (max-width: 720px) {
   .heroSection .container .banner .title {
     font-size: 4.5rem;
   }
 }
+
 @media (max-width: 520px) {
   .heroSection .container .banner:last-child .dishes_title {
     display: none;
@@ -320,11 +342,13 @@ nav svg {
     height: 350px;
   }
 }
+
 @media (max-width: 650px) {
   .heroSection {
     padding: 0;
   }
 }
+
 @media (max-width: 330px) {
   .heroSection .container .banner:first-child .imageBox img {
     width: 100%;
@@ -362,19 +386,19 @@ nav svg {
 }
 .heading {
   font-weight: 200;
-  font-size: 5rem; /* Letras más grandes */
+  font-size: 8rem; /* Letras más grandes */
   color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner .mid {
   width: 65%;
-  font-size: 20px; /* Aumentar tamaño de fuente */
+  font-size: 29px; /* Aumentar tamaño de fuente */
   font-weight: 300;
   letter-spacing: 2px;
   word-spacing: 5px;
   color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner .top p {
-  font-size: 20px; /* Aumentar tamaño de fuente */
+  font-size: 50px; /* Aumentar tamaño de fuente */
   font-weight: 400;
   color: #111; /* Color de letras para mayor contraste */
   letter-spacing: 2px;
@@ -388,7 +412,7 @@ nav svg {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-  font-size: 18px; /* Aumentar tamaño de fuente */
+  font-size: 30px; /* Aumentar tamaño de fuente */
   color: #111; /* Color de letras para mayor contraste */
 }
 .about .container .banner a span {

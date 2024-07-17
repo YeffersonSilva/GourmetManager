@@ -9,27 +9,24 @@ const About = () => {
         <div className="container">
           <div className="banner">
             <div className="top">
-              <h1 className="heading">ABOUT US</h1>
-              <p>The only thing we're serious about is food.</p>
+              <h1 className="heading">SOBRE NÓS</h1>
+              <p>A única coisa com a qual somos sérios é a comida.</p>
             </div>
             <p className="mid">
-              Lorem ipsum dolor sit, amet consectetur adipisicing elit.
-              Provident possimus optio adipisci dolores impedit illum iusto
-              perferendis, laudantium quod accusamus consequuntur consectetur,
-              tempore nulla error iure reiciendis dolorem assumenda.
-              Necessitatibus fugit asperiores totam rem esse exercitationem
-              iusto ipsum qui dolore ex, accusantium repellat mollitia
-              repellendus.
+              Na Sabores do Rio, dedicamo-nos a proporcionar a melhor experiência culinária. 
+              Nosso compromisso com ingredientes frescos e receitas exclusivas garante uma 
+              explosão de sabores a cada mordida. Venha nos visitar e descubra por que somos 
+              a melhor hamburgueria do Rio de Janeiro.
             </p>
             <Link to={"/"}>
-              Explore Menu{" "}
+              Explorar Menu{" "}
               <span>
                 <HiOutlineArrowRight />
               </span>
             </Link>
           </div>
           <div className="banner">
-            <img src="about.png" alt="about" />
+            <img src="../../public/hamb/pexels-edwardeyer-687824.jpg" alt="about" />
           </div>
         </div>
       </section>
