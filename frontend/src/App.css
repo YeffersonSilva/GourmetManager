@@ -160,6 +160,17 @@ nav svg {
 
 /********************** HERO SECTION COMPONENT STYLING **************************/
 /**********************************************************************************************************************/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .heroSection {
   display: flex;
   flex-direction: column;
@@ -179,6 +190,7 @@ nav svg {
   display: flex;
   max-width: 1200px;
   min-width: 1200px;
+  flex-wrap: wrap;
 }
 
 .heroSection .container .banner:first-child {
@@ -194,16 +206,48 @@ nav svg {
 .heroSection .container .banner .combined_boxes {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  position: relative; /* Para permitir posicionamiento absoluto */
 }
 
 .heroSection .container .banner .title {
   font-size: 8.5rem;
   font-weight: 200;
   color: #333; /* Color de letras gris oscuro */
+  transform: rotate(-10deg); /* Rotación para disposición creativa */
 }
 
 .heroSection .container .banner .textAndLogo {
   width: 50%;
+  position: relative;
+}
+
+.heroSection .container .banner .textAndLogo .title {
+  font-size: 5rem;
+  font-weight: 300;
+  color: #555; /* Color de letras más claro */
+  position: absolute;
+  top: -50px;
+  left: -20px;
+  transform: rotate(5deg); /* Rotación para disposición creativa */
+}
+
+.heroSection .container .banner .textAndLogo .logo {
+  width: 100px; /* Tamaño reducido del logo */
+  height: auto;
+  margin-top: 20px;
+  position: absolute;
+  top: -30px;
+  right: -30px;
+  transform: rotate(-15deg); /* Rotación para disposición creativa */
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.2); /* Sombra para efecto flotante */
+  transition: transform 0.3s ease-in-out; /* Transición para efecto de hover */
+}
+
+.heroSection .container .banner .textAndLogo .logo:hover {
+  transform: rotate(-15deg) scale(1.1); /* Escalado en hover */
 }
 
 .heroSection .container .banner .textWithSvg {
@@ -221,6 +265,10 @@ nav svg {
 }
 
 .heroSection .container .banner:first-child .imageBox {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
   width: 50%;
 }
 
@@ -231,6 +279,7 @@ nav svg {
 .heroSection .container .banner .imageBox img {
   width: 400px;
   height: 485px;
+  animation: fadeInUp 1.5s ease-in-out; /* Animación de entrada */
 }
 
 .heroSection .container .banner:last-child .imageBox {
@@ -239,11 +288,6 @@ nav svg {
 
 .heroSection .container .banner:last-child {
   flex: 1;
-}
-
-.heroSection .container .banner .logo {
-  width: 170px; /* Tamaño reducido del logo */
-  height: auto;
 }
 
 @media (max-width: 1280px) {
@@ -361,48 +405,71 @@ nav svg {
 
 /******************* ABOUT US COMPONENT STYLING **************/
 /**********************************************************************************************************************/
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 .about {
   display: flex;
   min-height: 100vh;
   justify-content: center;
   align-items: center;
   background: #6D6027;  /* fallback for old browsers */
-  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
-   /* Degradado de gris oscuro a gris claro */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
+
 .about .container {
   max-width: 1500px;
   min-width: 1500px;
   display: flex;
+  animation: fadeInUp 1.5s ease-in-out; /* Animación de entrada para el contenedor */
 }
+
 .about .container .banner {
   flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
 }
+
 .about .container .banner img {
   width: 100%;
+  animation: fadeInUp 1.5s ease-in-out; /* Animación de entrada para las imágenes */
 }
+
 .heading {
   font-weight: 200;
-  font-size: 8rem; /* Letras más grandes */
+  font-size: 5rem; /* Letras más grandes */
   color: #111; /* Color de letras para mayor contraste */
 }
+
 .about .container .banner .mid {
   width: 65%;
-  font-size: 29px; /* Aumentar tamaño de fuente */
+  font-size: 20px; /* Aumentar tamaño de fuente */
   font-weight: 300;
   letter-spacing: 2px;
   word-spacing: 5px;
   color: #111; /* Color de letras para mayor contraste */
 }
+
+.about .mid {
+  margin-bottom: 10px;
+}
+
 .about .container .banner .top p {
-  font-size: 50px; /* Aumentar tamaño de fuente */
+  font-size: 30px; /* Aumentar tamaño de fuente */
   font-weight: 400;
   color: #111; /* Color de letras para mayor contraste */
   letter-spacing: 2px;
 }
+
 .about .container .banner a {
   border: 1px solid #111; /* Bordes para mayor contraste */
   padding: 10px 30px; /* Aumentar padding */
@@ -415,6 +482,7 @@ nav svg {
   font-size: 30px; /* Aumentar tamaño de fuente */
   color: #111; /* Color de letras para mayor contraste */
 }
+
 .about .container .banner a span {
   margin-left: 1rem;
   padding: 6px;
@@ -422,14 +490,23 @@ nav svg {
   border-radius: 100%;
   color: #fff; /* Color de letras del span */
 }
+
 .about .container .banner a:hover {
   color: #fff;
   background: #111; /* Fondo en hover */
   transition: ease-in-out 0.3s;
 }
+
 .about .container .banner a:hover span {
   background: #fff; /* Fondo del span en hover */
   color: #111; /* Color de letras del span en hover */
+}
+
+.banner img {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 @media (max-width: 1520px) {
@@ -440,6 +517,7 @@ nav svg {
     min-width: fit-content;
   }
 }
+
 @media (max-width: 1050px) {
   .about .container .banner:first-child {
     padding-right: 30px;
@@ -449,6 +527,7 @@ nav svg {
     margin: 20px 0;
   }
 }
+
 @media (max-width: 786px) {
   .about .container {
     flex-direction: column-reverse;
@@ -462,16 +541,19 @@ nav svg {
     padding: 0;
   }
 }
+
 @media (max-width: 530px) {
   .heading {
     font-size: 3rem;
   }
 }
+
 @media (max-width: 450px) {
   .about .container .banner img {
     width: 100%;
   }
 }
+
 /**********************************************************************************************************************/
 
 /* QUALITIES COMPONENT STYLING */
@@ -482,8 +564,7 @@ nav svg {
   padding: 75px 20px;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Degradado de blanco a verde */
-}
+  background-image: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%); /* Degradado de blanco a verde */}
 .qualities .container {
   min-width: 1500px;
   max-width: 1500px;
@@ -555,7 +636,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 50px 20px;
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
 .menu .container {
   max-width: 1500px;
@@ -652,7 +733,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   padding: 20px;
-  background: linear-gradient(90deg, #ACBB78, #F7F8F8); /* Degradado de blanco a verde */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
 .team .container {
   max-width: 1500px;
@@ -736,7 +817,7 @@ nav svg {
   justify-content: center;
   align-items: center;
   min-height: 80vh;
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
 .who_are_we .container {
   max-width: 1500px;
@@ -826,7 +907,7 @@ footer {
   align-items: center;
   height: fit-content;
   padding: 20px 20px 10px 20px;
-  background: linear-gradient(90deg, #ACBB78, #F7F8F8); /* Degradado de blanco a verde */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
 footer .container {
   max-width: 1500px;
@@ -902,7 +983,7 @@ footer .container .banner .right {
   padding: 30px 20px;
   justify-content: center;
   align-items: center;
-  background: linear-gradient(to right, #2c3e50, #bdc3c7); /* Degradado de gris oscuro a gris claro */
+  background-image: linear-gradient(to top, #cfd9df 0%, #e2ebf0 100%); /* Degradado de gris oscuro a gris claro */
 }
 .reservation .container {
   max-width: 1500px;
